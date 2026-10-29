@@ -1,5 +1,12 @@
+import Nav from '../components/Nav'
+
 function Contato() {
-  return <h1>Contato</h1>
+  return (
+    <>
+      <Nav />
+      <h1>Contato</h1>
+    </>
+  )
 }
 
 export default Contato

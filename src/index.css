@@ -1,0 +1,29 @@
+:root {
+  --color-bg: #CE8FE0;
+  --color-text: #050505;
+  --color-accent: #2CBFDD;
+  --color-on-accent: #050505;
+  --color-burst: #050505;
+  --color-fill: #FFFFFF;
+  --color-stroke: #050505;
+
+  --font-title: 'Zen Dots', sans-serif;
+  --font-ui: 'Orbitron', sans-serif;
+}
+
+[data-theme='dark'] {
+  --color-bg: #190A1E;
+  --color-text: #F6F4F5;
+  --color-accent: #91DAE9;
+  --color-on-accent: #190A1E;
+  --color-burst: #F6F4F5;
+  --color-fill: #050505;
+  --color-stroke: #F6F4F5;
+}
+
+body {
+  margin: 0;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-ui);
+}

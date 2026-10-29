@@ -1,23 +1,18 @@
-import { HashRouter, Routes, Route, Link } from 'react-router-dom'
+import { HashRouter, Routes, Route } from 'react-router-dom'
 import Home from './pages/Home'
 import Servicos from './pages/Servicos'
 import Projetos from './pages/Projetos'
 import SobreMim from './pages/SobreMim'
 import Contato from './pages/Contato'
+import { useTheme } from './hooks/useTheme'
 
 function App() {
+  const { toggleTheme } = useTheme()
+
   return (
     <HashRouter>
-      <nav>
-        <Link to="/">Home</Link>
-        <Link to="/servicos">Serviços</Link>
-        <Link to="/projetos">Projetos</Link>
-        <Link to="/sobre-mim">Sobre mim</Link>
-        <Link to="/contato">Contato</Link>
-      </nav>
-
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<Home onToggleTheme={toggleTheme} />} />
         <Route path="/servicos" element={<Servicos />} />
         <Route path="/projetos" element={<Projetos />} />
         <Route path="/sobre-mim" element={<SobreMim />} />
