@@ -1,11 +1,6 @@
-import Nav from '../components/Nav'
-
 function Projetos() {
   return (
-    <>
-      <Nav />
-      <h1>Projetos</h1>
-    </>
+    <h1>Projetos</h1>
   )
 }
 

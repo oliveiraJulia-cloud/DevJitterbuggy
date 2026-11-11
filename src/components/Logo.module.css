@@ -1,0 +1,17 @@
+.logo {
+  width: 48px;
+  height: 48px;
+}
+
+.burst {
+  fill: var(--color-burst);
+}
+
+.letter {
+  font-family: var(--font-title);
+  font-size: 46px;
+  fill: var(--color-fill);
+  stroke: var(--color-stroke);
+  stroke-width: 4px;
+  paint-order: stroke fill;
+}

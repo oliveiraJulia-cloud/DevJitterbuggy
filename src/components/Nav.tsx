@@ -1,14 +1,33 @@
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 import styles from './Nav.module.css'
 
-function Nav() {
+type Props = {
+  compact?: boolean
+}
+
+const links = [
+  { to: '/', label: 'Home' },
+  { to: '/servicos', label: 'Serviços' },
+  { to: '/projetos', label: 'Projetos' },
+  { to: '/sobre-mim', label: 'Sobre mim' },
+  { to: '/contato', label: 'Contato' },
+]
+
+function Nav({ compact = false }: Props) {
   return (
-    <nav className={styles.nav}>
-      <Link className={styles.link} to="/">Home</Link>
-      <Link className={styles.link} to="/servicos">Serviços</Link>
-      <Link className={styles.link} to="/projetos">Projetos</Link>
-      <Link className={styles.link} to="/sobre-mim">Sobre mim</Link>
-      <Link className={styles.link} to="/contato">Contato</Link>
+    <nav className={compact ? `${styles.nav} ${styles.compact}` : styles.nav}>
+      {links.map((link) => (
+        <NavLink
+          key={link.to}
+          to={link.to}
+          end
+          className={({ isActive }) =>
+            isActive ? `${styles.link} ${styles.active}` : styles.link
+          }
+        >
+          {link.label}
+        </NavLink>
+      ))}
     </nav>
   )
 }

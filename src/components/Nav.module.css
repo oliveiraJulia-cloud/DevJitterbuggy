@@ -16,4 +16,18 @@
 .link:hover {
   background: var(--color-accent);
   color: var(--color-on-accent);
+
+  .compact {
+  gap: 12px;
+}
+
+.compact .link {
+  padding: 10px 18px;
+  font-size: 15px;
+}
+
+.compact .active {
+  background: var(--color-accent);
+  color: var(--color-on-accent);
+}
 }

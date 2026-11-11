@@ -4,6 +4,7 @@ import Servicos from './pages/Servicos'
 import Projetos from './pages/Projetos'
 import SobreMim from './pages/SobreMim'
 import Contato from './pages/Contato'
+import PageLayout from './components/PageLayout'
 import { useTheme } from './hooks/useTheme'
 
 function App() {
@@ -13,10 +14,12 @@ function App() {
     <HashRouter>
       <Routes>
         <Route path="/" element={<Home onToggleTheme={toggleTheme} />} />
-        <Route path="/servicos" element={<Servicos />} />
-        <Route path="/projetos" element={<Projetos />} />
-        <Route path="/sobre-mim" element={<SobreMim />} />
-        <Route path="/contato" element={<Contato />} />
+        <Route element={<PageLayout onToggleTheme={toggleTheme} />}>
+          <Route path="/servicos" element={<Servicos />} />
+          <Route path="/projetos" element={<Projetos />} />
+          <Route path="/sobre-mim" element={<SobreMim />} />
+          <Route path="/contato" element={<Contato />} />
+        </Route>
       </Routes>
     </HashRouter>
   )

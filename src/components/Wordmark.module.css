@@ -1,7 +1,7 @@
 .wrapper {
   position: relative;
-  width: 760px;
-  height: 320px;
+  width: min(760px, 92vw);
+  aspect-ratio: 760 / 320;
 }
 
 .burst {
@@ -22,10 +22,10 @@
   justify-content: center;
   font-family: var(--font-title);
   font-weight: 400;
-  font-size: 64px;
+  font-size: min(64px, 7.75vw);
   color: var(--color-fill);
-  -webkit-text-stroke: 8px var(--color-stroke);
+  -webkit-text-stroke: 0.125em var(--color-stroke);
   paint-order: stroke fill;
-  text-shadow: 6px 6px 0 var(--color-stroke);
+  text-shadow: 0.094em 0.094em 0 var(--color-stroke);
   transform: rotate(-4deg);
 }
